@@ -12,10 +12,12 @@ let animeList = [
         imgLink: "https://pm1.narvii.com/6251/4227229f395b72d03953a2fd56e05400895bdb7a_hq.jpg"
     }
 ];
-  
+
 for(let i = 0; i < animeList.length; i++)
 {
-    document.write("<img class=\"anime\" src=" + animeList[i].imgLink + ">");
+    let element = document.getElementById("animeList");
+    element.innerHTML = element.innerHTML + "<img class=\"anime\" src=" + animeList[i].imgLink + " />"; // inner : what's inside
+    console.log(element);
 }
 
 let formatList = [".jpg", ".png", ".jpeg", ".gif", ".tif", ".tiff", ".bmp", ".eps", ".raw", ".cr2", ".nef", ".orf", ".sr2"];
@@ -24,15 +26,22 @@ function addAnime()
 {
     let animeImgLink = document.getElementById("image").value;
     let animeName = document.getElementById("anime").value;
+    
+    let error = document.getElementById("error");
+    error.innerHTML = "";
 
     if(testFormat(animeImgLink))
     {
         listAnime(animeImgLink);
+        animeList.push({name: animeName, imgLink: animeImgLink});
     }
-    else
+    else // link not valid
     {
-
+        error.innerHTML ="Error: cannot get image from link. Example of a valid link:<br>https://site.com/imageName.format";
     }
+
+    document.getElementById("image").value = "";
+    document.getElementById("anime").value = "";
 }
 
 function testFormat(animeImgLink)
@@ -51,6 +60,12 @@ function testFormat(animeImgLink)
 function listAnime(animeImgLink)
 {
     let element = document.getElementById("animeList");
-    element.innerHTML("<img src=" + animeImgLink + " />");
+    element.innerHTML = element.innerHTML + "<img class=\"anime\" src=" + animeImgLink + " />";
 }
-  
+/*
+function printError()
+{
+    let element = document.getElementById("error");
+    element.innerHTML("Error: cannot get image from link.<br>Example of a valid link:<br>");
+}
+*/
