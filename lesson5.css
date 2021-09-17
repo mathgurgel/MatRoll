@@ -1,0 +1,57 @@
+body {
+    font-family: "Roboto Mono", monospace;
+    text-align: center;
+    min-height: 1080px;
+    
+    background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.4), 
+          rgba(0, 0, 0, 0.6)
+        ),
+        url("https://i.imgur.com/JNnzgsS.jpeg");
+
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.page-title {
+    color: #ffffff;
+    margin: 0 0 5px;
+    text-shadow: 2px 2px #000000;
+}
+
+.page-subtitle {
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+.page-logo {
+    width: 200px;
+    filter: hue-rotate(32deg) brightness(200%) drop-shadow(2px 2px 3px black);
+}
+
+.git-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    filter: invert(100%) drop-shadow(2px 2px 3px black);
+}
+
+body > img {
+    margin: 0 10px;
+}
+
+img {
+    max-height: 250px;
+}
+
+.anime {
+    filter:drop-shadow(4px 4px 6px black);
+}
