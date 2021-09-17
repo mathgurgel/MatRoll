@@ -23,14 +23,15 @@ let formatList = [".jpg", ".png", ".jpeg", ".gif", ".tif", ".tiff", ".bmp", ".ep
 function addAnime()
 {
     let animeImgLink = document.getElementById("image").value;
+    let animeName = document.getElementById("anime").value;
 
     if(testFormat(animeImgLink))
     {
-
+        listAnime(animeImgLink);
     }
     else
     {
-        
+
     }
 }
 
@@ -45,5 +46,11 @@ function testFormat(animeImgLink)
     }
 
     return false;
+}
+
+function listAnime(animeImgLink)
+{
+    let element = document.getElementById("animeList");
+    element.innerHTML("<img src=" + animeImgLink + " />");
 }
   
