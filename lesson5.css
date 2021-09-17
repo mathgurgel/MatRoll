@@ -55,3 +55,41 @@ img {
 .anime {
     filter:drop-shadow(4px 4px 6px black);
 }
+
+.form-wrapper {
+    margin: 0 0 15px;
+}
+  
+.form-wrapper input {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    padding: 10px 15px;
+    filter: drop-shadow(1px 1px black);
+}
+
+::placeholder {
+    text-align: center;
+}
+
+.form-wrapper button {
+    border: 0;
+    color: #ffffff;
+    background: #ff6200;
+    font-weight: bold;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    filter: drop-shadow(2px 2px 3px black);
+}
+
+.form-wrapper button:hover {
+    opacity: 0.8;
+}
+
+p {
+    text-shadow: 1px 1px 1px #000000;
+}
