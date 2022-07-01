@@ -1,4 +1,5 @@
 let animeList = [
+/*
     {
         name: "Naruto",
         imgLink: "https://i.imgur.com/9HSI4fT.jpeg"
@@ -11,6 +12,7 @@ let animeList = [
         name: "Aria",
         imgLink: "https://pm1.narvii.com/6251/4227229f395b72d03953a2fd56e05400895bdb7a_hq.jpg"
     }
+*/
 ];
 
 for(let i = 0; i < animeList.length; i++)
@@ -23,9 +25,6 @@ function addAnime()
 {
     let animeImgLink = document.getElementById("image").value;
     let animeName = document.getElementById("anime").value;
-    
-    // let error = document.getElementById("error");
-    // error.innerHTML = "";
 
     if(testFormat(animeImgLink))
     {
@@ -34,7 +33,6 @@ function addAnime()
     }
     else // link not valid
     {
-        // error.innerHTML = "Error: cannot get image from link. Example of a valid link:<br>https://site.com/imageName.format";
         alert("Error: cannot get image from link. Example of a valid link:\nhttps://site.com/imageName.format");
     }
 
@@ -62,10 +60,3 @@ function listAnime(animeImgLink)
     let element = document.getElementById("animeList");
     element.innerHTML = element.innerHTML + "<img class=\"anime\" src=" + animeImgLink + " />";
 }
-/*
-function printError()
-{
-    let element = document.getElementById("error");
-    element.innerHTML("Error: cannot get image from link.<br>Example of a valid link:<br>");
-}
-*/
