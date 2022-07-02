@@ -2,7 +2,7 @@
 MatRoll is a utility tool for creating a list with your favorite animes.
 
 ## How to Use
-- Download the `.zip` source of code and open the `lesson.html` file in your browser.
+- Download the `.zip` source of code and open the `lesson5.html` file in your browser.
 - Insert an anime by its name and a link to an image you want to display.
 - Take a screenshot and share with your friends.
 
